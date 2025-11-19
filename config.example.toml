@@ -1,7 +1,36 @@
+
+# Example configuration file for Healthcare RAG PoC
+
 [openai]
+# Chat model to use for generation
 api_key = "YOUR_API_KEY_HERE"
-model = "gpt-4o-mini"
+model = "gpt-4.1"
+# Embedding model for document vectors
+embedding_model = "text-embedding-3-large"
+# Low temperature for stability in healthcare contexts
+temperature = 0.1
+
+[paths]
+# Directory containing public patient-education materials
+documents = "data/"
+# Path to store or load the FAISS index
+index = "index/faiss.index"
+# Metadata file storing chunk mappings
+metadata = "index/metadata.json"
+
+[rag]
+# Chunk size for document splitting
+chunk_size = 800
+chunk_overlap = 150
+# Number of passages to retrieve
+top_k = 4
 
 [vector_store]
 index_path = "data/index.faiss"
 metadata_path = "data/index_metadata.json"
+
+[safety]
+# Enables conservative safety behaviors in prompt construction
+conservative_mode = true
+
+

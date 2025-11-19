@@ -1,0 +1,7 @@
+[openai]
+api_key = "YOUR_API_KEY_HERE"
+model = "gpt-4o-mini"
+
+[vector_store]
+index_path = "data/index.faiss"
+metadata_path = "data/index_metadata.json"

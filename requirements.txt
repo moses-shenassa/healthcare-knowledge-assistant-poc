@@ -1,0 +1,9 @@
+
+### 2.3. `requirements.txt`
+
+```text
+openai>=1.0.0
+faiss-cpu
+tomli; python_version < "3.11"
+tomllib; python_version >= "3.11"
+tqdm
